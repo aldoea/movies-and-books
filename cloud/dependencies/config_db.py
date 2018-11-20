@@ -1,0 +1,3 @@
+SERVER = 'SKULLCRUSHER' 
+DATABASE = 'MoviesBooks' 
+DRIVER = '{SQL SERVER}'

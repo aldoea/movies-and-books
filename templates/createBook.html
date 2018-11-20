@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create new book</title>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Movies&Books</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/books">Libros</a>                        
+                    </li>                
+                    <li>
+                        <a href="/movies">Peliculas</a>                        
+                    </li>                
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container col-md-4 col-md-offset-4">
+        <form class="form-signin" action="/books/create" novalidate method="POST">
+            <h2 class="form-signin-heading">Crear Libro</h2>
+            <label for="inputISBN" class="sr-only">ISBN</label>
+            <input type="text" id="inputISBN" name="ISBN" class="form-control" placeholder="ISBN" required>
+            <label for="inputTitle" class="sr-only">Titulo</label>
+            <input type="text" id="inputTitle" name="title"  class="form-control" placeholder="Titulo" required autofocus>
+            <label for="inputCountry" class="sr-only">País</label>
+            <input type="text" id="inputCountry" name="country"  class="form-control" placeholder="País" required autofocus>
+            <label for="inputEdition" class="sr-only">Edición</label>
+            <input type="text" id="inputEdition" name="numEdition" class="form-control" placeholder="Edition" required>
+            <label for="inputOriginalLanguage" class="sr-only">Idioma Original</label>
+            <input type="text" id="inputOriginalLanguage" name="originalLanguage" class="form-control" placeholder="Idioma original" required>
+            <label for="inputAdaptedLanguage" class="sr-only">Idioma Adaptado</label>
+            <input type="text" id="inputAdaptedLanguage" name="adaptedLanguage" class="form-control" placeholder="Idioma adaptado" required>
+            <label for="inputReleaseDate" class="sr-only">Año de publicación</label>
+            <input type="text" id="inputReleaseDate" name="releaseDate" class="form-control" placeholder="Año de Publicación" required>
+            <label for="inputprintedDate" class="sr-only">Año de impresión</label>
+            <input type="text" id="inputprintedDate" name="printedDate" class="form-control" placeholder="Año de impresión" required>
+            <label for="inputEditorial" class="sr-only">Clave Editorial</label>
+            <input type="text" id="inputEditorial" name="cveEditorial" class="form-control" placeholder="Clave editorial" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Agregar</button>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="/static/js/jquery.js"></script>
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
